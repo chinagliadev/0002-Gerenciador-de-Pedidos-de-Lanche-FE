@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #faf4e8;
+}
+
+.cabecalho {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 100px;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu>a {
+    text-decoration: none;
+    color: black;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    padding: 0px 100px;
+    align-items: center;
+
+    background:
+        linear-gradient(90deg, rgba(12, 12, 12, 1) 17%, rgba(12, 12, 12, 0) 100%),
+        url('./img/hero-hamburguer.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero .apresentacao-lanchonete{
+    display: flex;
+    color: white;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+}
+
+.hero .titulo-hero{
+    font-size: 80px;
+}
+
+.hero .paragrafo-apresentacao{
+    color: rgb(182, 182, 182);
+}
+
+.hero .botoes-hero .botao-hero{
+    width: 200px;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.hero .botoes-hero .botao-hero:hover{
+    background-color: white;
+    color: black;
+    transition: 0.2s;
+}
+
+.lista-produtos{
+    min-height: 100vh;
+    padding: 0px 100px;
+}
+
+.lista-produtos .cardapio{
+    text-align: center;
+    padding: 20px;
+    color: #b21819;
+    font-weight: bold;
+}
+
+.card-produto{
+    padding: 4px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.card-produto .card-body-produto{
+    margin-top: 20px;
+}
+
+
+.card-body-produto > h3{
+    font-weight: bolder;
+    font-size: 27px;
+}
+
+.card-body-produto > strong{
+    font-size: 24px;
+}
+
+.card-produto > img{
+    width: 100%;
+    border-radius: 10px;
+    height: 350px;
+    background-size: cover;
+}
+
+.card-footer-produto .card-botao{
+    border: none;
+    background-color: red;
+    color: white;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    transition: 0.2S;
+}
+
+.card-footer-produto .card-botao:hover{
+    background-color: rgb(172, 0, 0);
+    transition: 0.2S;
+}
