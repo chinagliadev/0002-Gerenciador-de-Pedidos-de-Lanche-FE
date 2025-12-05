@@ -1,10 +1,16 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('./font/Roboto-VariableFont_wdth\,wght.ttf');
+}
+
 * {
     margin: 0;
     padding: 0;
 }
 
 body{
-    background-color: #faf4e8;
+    background-color: #faf8f5;
+    font-family: 'Roboto';
 }
 
 .cabecalho {
@@ -12,7 +18,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 100px;
+    padding: 15px 0px;
 }
 
 .menu {
@@ -26,14 +32,12 @@ body{
 }
 
 .hero {
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     padding: 0px 100px;
     align-items: center;
-
-    background:
-        linear-gradient(90deg, rgba(12, 12, 12, 1) 17%, rgba(12, 12, 12, 0) 100%),
-        url('./img/hero-hamburguer.jpg');
+    justify-content: center;
+    text-align: center;
     background-size: cover;
     background-position: center;
 }
@@ -43,15 +47,24 @@ body{
     color: white;
     flex-direction: column;
     width: 100%;
-    max-width: 600px;
+    max-width: 1000px;
 }
 
 .hero .titulo-hero{
     font-size: 80px;
+    color: red;
+    font-weight: bold;
 }
 
 .hero .paragrafo-apresentacao{
-    color: rgb(182, 182, 182);
+    color: rgb(85, 85, 85);
+    font-size: 20px;
+}
+
+.hero .botoes-hero{
+    display: flex;
+    justify-content: center;
+    gap: 13px;
 }
 
 .hero .botoes-hero .botao-hero{
@@ -59,22 +72,67 @@ body{
     border: none;
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid white;
+    border: 1px solid red;
     background-color: transparent;
-    color: white;
+    color: red;
     font-weight: 500;
     transition: 0.2s;
 }
 
 .hero .botoes-hero .botao-hero:hover{
-    background-color: white;
-    color: black;
+    background-color: red;
+    color: white;
     transition: 0.2s;
 }
 
+.sobre{
+    min-height: 80vh;
+    padding: 0; 
+    display: flex;
+    align-items: center;
+}
+
+
+.sobre { padding: 40px 0; } 
+.row.align-items-stretch { align-items: stretch; } 
+
+.caixa-sobre{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+
+.caixa-grande {
+  height: 100%;
+  min-height: 520px; 
+}
+
+.right-stack {
+  height: 100%;     
+  min-height: 520px; 
+}
+
+.caixa-pequena {
+  flex: 1 1 0;       
+  min-height: 0;     
+}
+
+.text-caixa-titulo{
+    font-size: 50px;
+}
+.paragrafo-caixa{
+    font-size: 30px;
+}
+
+.text-caixa p,
+.text-caixa h2 {
+    margin: 0;
+}
+
 .lista-produtos{
-    min-height: 100vh;
-    padding: 0px 100px;
+    min-height: 70vh;
 }
 
 .lista-produtos .cardapio{
@@ -84,32 +142,59 @@ body{
     font-weight: bold;
 }
 
-.card-produto{
-    padding: 4px;
-    border-radius: 10px;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+.lista-produtos .opcoes-cardapio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    list-style: none;
+    width: 100%;
 }
 
-.card-produto .card-body-produto{
-    margin-top: 20px;
+.active{
+    border-bottom: 3px solid red;
+}
+
+.card-produto{
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid rgb(218, 218, 218);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    transition: 0.3s;  
+    transform: scale(1); 
+    cursor: pointer;
+}
+
+.card-produto:hover{
+    transform: scale(1.05);  /* aumenta um pouco ao passar o mouse */
+}
+
+.card-body-produto{
+    flex-grow: 1; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    transition: 0.3s;
 }
 
 
 .card-body-produto > h3{
-    font-weight: bolder;
-    font-size: 27px;
+    font-size: 22px;
+    
 }
 
-.card-body-produto > strong{
-    font-size: 24px;
+.card-body-produto > span{
+    font-size: 18px;
 }
 
 .card-produto > img{
     width: 100%;
-    border-radius: 10px;
-    height: 350px;
-    background-size: cover;
+    height: 180px;      
+    object-fit: contain; 
 }
 
 .card-footer-produto .card-botao{
@@ -120,10 +205,67 @@ body{
     padding: 10px;
     border-radius: 10px;
     width: 100%;
-    transition: 0.2S;
+    transition: 0.2s;
 }
 
 .card-footer-produto .card-botao:hover{
     background-color: rgb(172, 0, 0);
     transition: 0.2S;
+}
+
+.rodape{
+    background: linear-gradient(90deg, #c40000, #ff0000);
+    padding: 40px 0 20px 0;
+    color: white;
+    margin-top: 50px;
+    box-shadow: 0px -4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.linha-footer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.footer-col h4{
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.footer-col ul{
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li{
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.footer-col p{
+    max-width: 250px;
+}
+
+.social a{
+    display: block;
+    color: white;
+    margin-bottom: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.social a:hover{
+    text-decoration: underline;
+    transform: translateX(5px);
+}
+
+.direitos{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    opacity: 0.9;
 }

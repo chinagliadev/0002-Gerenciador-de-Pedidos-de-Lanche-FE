@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Burgao Delicia</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <header class="cabecalho">
+    <header class="cabecalho container">
         <h1 class="logo">Burgão Delicia</h1>
         <nav class="menu">
             <a href="#">Home</a>
@@ -28,58 +28,106 @@
                 qualidade é regra: carne 100% artesanal, pães frescos e ingredientes que elevam cada mordida. Venha
                 provar a combinação perfeita de textura e sabor. É crocante por fora, suculento por dentro, e
                 garantimos: o melhor burgão que você vai comer na cidade!</p>
-                <div class="botoes-hero">
-                    <button class="btn-cardapio botao-hero">Cardapio</button>
-                    <button class="btn-pedido botao-hero">Pedido</button>
-                </div>
+            <div class="botoes-hero">
+                <button class="btn-cardapio botao-hero">Cardapio</button>
+                <button class="btn-pedido botao-hero">Pedido</button>
+            </div>
         </div>
     </section>
 
-    <section class="lista-produtos">
+    <section class="sobre">
+        <div class="container">
+            <div class="row g-3 align-items-stretch">
+                <div class="col-lg-6 d-flex">
+                    <div class="caixa-sobre caixa-grande" style="background-image: 
+                        linear-gradient(0deg, rgba(36, 35, 35, 0.37)100%),
+                        url('./img/pexels-valeriya-1199957.jpg');">
+                        <div class="text-caixa text-white p-4">
+                            <p class="paragrafo-caixa">Os queridinhos da galera</p>
+                            <h2 class="text-caixa-titulo">MAIS PEDIDOS</h2>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="right-stack h-100 d-flex flex-column gap-3">
+                        <div class="caixa-sobre caixa-pequena" style="background-image:
+                             linear-gradient(0deg, rgba(36, 35, 35, 0.37)100%), 
+                                url('./img/lanche-queijo.jpg');">
+                            <div class="text-caixa text-white p-4">
+                                <p class="paragrafo-caixa">Lanche com</p>
+                                <h2 class="text-caixa-titulo">MUITO QUEIJO</h2>
+                            </div>
+
+                        </div>
+                        <div class="caixa-sobre caixa-pequena" style="background-image:
+                             linear-gradient(0deg, rgba(36, 35, 35, 0.37)100%),
+                            url('./img/lanche-bacon.jpg');">
+                            <div class="text-caixa text-white p-4">
+                                <p class="paragrafo-caixa">Lanche com</p>
+                                <h2 class="text-caixa-titulo">MUITO BACON</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="lista-produtos container">
         <h2 class="cardapio">Cardapio</h2>
-        <div class="row">
-            <div class="col-lg-3">
+        <ul class="opcoes-cardapio fs-5">
+            <li class="fw-bold active">Lanches</li>
+            <li>Sobremesas</li>
+            <li>Bebidas</li>
+        </ul>
+        <div class="row g-3 d-flex align-items-stretch">
+            <div class="col-lg-3 d-flex">
                 <div class="card-1 card-produto">
-                    <img src="./img/x-salada.jpg" alt="">
+                    <img src="./img/lanche_frango.png" alt="">
                     <div class="card-body-produto">
-                        <h3>X-Salada</h3>
-                        <strong>R$ 24,90</strong>
+                        <h3>X-Frango</h3>
+                        <span>R$ 24,90</span>
                     </div>
                     <div class="card-footer-produto">
                         <button class="card-botao">COMPRAR</button>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 d-flex">
                 <div class="card-1 card-produto">
-                    <img src="./img/x-salada.jpg" alt="">
+                    <img src="./img/lanche-cheeseburguer.png" alt="">
                     <div class="card-body-produto">
-                        <h3>X-Salada</h3>
-                        <strong>R$ 24,90</strong>
+                        <h3>X-cheeseburguer</h3>
+                        <span>R$ 14,90</span>
                     </div>
                     <div class="card-footer-produto">
                         <button class="card-botao">COMPRAR</button>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 d-flex">
                 <div class="card-1 card-produto">
-                    <img src="./img/x-salada.jpg" alt="">
+                    <img src="./img/lanche-xbacon.png" alt="">
                     <div class="card-body-produto">
-                        <h3>X-Salada</h3>
-                        <strong>R$ 24,90</strong>
+                        <h3>X-Bacon</h3>
+                        <span>R$ 34,90</span>
                     </div>
                     <div class="card-footer-produto">
                         <button class="card-botao">COMPRAR</button>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 d-flex">
                 <div class="card-1 card-produto">
-                    <img src="./img/x-salada.jpg" alt="">
+                    <img src="./img/lanche-triplo-carne.png" alt="">
                     <div class="card-body-produto">
                         <h3>X-Salada</h3>
-                        <strong>R$ 24,90</strong>
+                        <span>R$ 24,90</span>
                     </div>
                     <div class="card-footer-produto">
                         <button class="card-botao">COMPRAR</button>
@@ -90,8 +138,49 @@
     </section>
 
     <footer class="rodape">
-        <p>Burgão Delicia - Todos os direitos reservados</p>
+        <div class="container">
+
+            <div class="linha-footer">
+
+                <div class="footer-col">
+                    <h4>Burgão Delícia</h4>
+                    <p>Sabor de verdade, feito com carinho!</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li>(19) 99999-9999</li>
+                        <li>contato@burgaodelicia.com</li>
+                        <li>Rua dos Lanches, 123 - Americana/SP</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Horário</h4>
+                    <ul>
+                        <li>Seg a Sex: 18h às 23h</li>
+                        <li>Sábado: 17h às 00h</li>
+                        <li>Domingo: 17h às 23h</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Redes Sociais</h4>
+                    <div class="social">
+                        <a href="#">Instagram</a>
+                        <a href="#">Facebook</a>
+                        <a href="#">WhatsApp</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <p class="direitos">© 2025 Burgão Delícia - Todos os direitos reservados</p>
+
+        </div>
     </footer>
+
     <script src="./app.js"></script>
 </body>
 
